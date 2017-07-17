@@ -3,7 +3,7 @@ Working scripts of [Chu, X.-Y.; Jiang, L.-H.; Zhou, X.-H.; Cui, Z.-J.; Zhang, H.
   
 Usage:
 ------
-**## 1 . Delete nodes**
+### **1 . Delete nodes**
 
 Run 'network_rewiring.py' and add the number of nodes you want to delete, for example:
 ```shell
@@ -15,7 +15,7 @@ $ python network_rewiring.py 0
 ```
 This step will create the folder and files needed in the next step.
   
-**2 . Calculate attractors**
+### **2 . Calculate attractors**
 
 
 * **Without start input**
@@ -25,8 +25,8 @@ This step will create the folder and files needed in the next step.
   ```shell
   $ python attractors_without_nodes.py 1 42
   ```      
-  '1' means you want to delete 1 node, '42' means the origion network contains 42 nodes.
-  This step will calculate the attractors and put them into the folder named as the number of nodes you input,for example:
+  `1` means you want to delete 1 node, `42` means the origion network contains 42 nodes.
+  This step will calculate the attractors and put them into the folder named as the number of nodes you input, just like:
   ```shell
   $ '/../network_without_nodes/2'
   ```
@@ -37,8 +37,9 @@ This step will create the folder and files needed in the next step.
   ```
   first column is the size of attractor, second column is the attractor.
   
-* With start input
-  Make sure inputfile exist in your working directory.
+* **With start input**
+
+  Make sure input file exist in your working directory.
   Run script `attractors_without_nodes.py` and add the number of nodes you want to delete,the total number of network and the inputfilename, just like:
   ```shell
   $ python attractors_without_nodes.py 1 42 Input_file.txt
