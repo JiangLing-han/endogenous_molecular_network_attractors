@@ -1,20 +1,24 @@
 # endogenous_molecular_network_attractors
-Working scripts of [Chu, X.-Y.; Jiang, L.-H.; Zhou, X.-H.; Cui, Z.-J.; Zhang, H.-Y.	Evolutionary Origins of Cancer Driver Genes and Implications for Cancer Prognosis. ***Genes*** 2017, 8, 182.](http://www.mdpi.com/2073-4425/8/7/182), for calculating endogenous molecular network 's attractors.
+Working scripts of [Chu, X.-Y.; Jiang, L.-H.; Zhou, X.-H.; Cui, Z.-J.; Zhang, H.-Y.	Evolutionary Origins of Cancer Driver Genes and Implications for Cancer Prognosis. ***Genes*** 2017, 8, 182.](http://www.mdpi.com/2073-4425/8/7/182), for calculating endogenous molecular network's attractors.
   
 Usage:
 ------
-1 . Delete nodes
+1 . **Delete nodes**
 
 Run 'network_rewiring.py' and add the number of nodes you want to delete, for example:
 ```shell
 $ python network_rewiring.py 1
 ```
-If you just want to calculate attractors, skip this step. This step will create the folder and files needed in the next step.
+If you just want to calculate attractors,
+```shell
+$ python network_rewiring.py 0
+```
+This step will create the folder and files needed in the next step.
   
-2 . Calculate attractors
+2 . **Calculate attractors**
 
 
-* Without start input
+* **Without start input**
 
   Run script 'attractors_without_nodes.py' and add the number of nodes you want to delete,the total number of network 
   for example:
@@ -62,4 +66,4 @@ If you just want to calculate attractors, skip this step. This step will create 
         
    left is the nodes number, it should start from 1;
    right is its value which should be float, using space to sepreate them.
-   Others are the same as `Without start input`.
+   Others are the same as last section.
