@@ -3,7 +3,7 @@ Working scripts of [Chu, X.-Y.; Jiang, L.-H.; Zhou, X.-H.; Cui, Z.-J.; Zhang, H.
   
 Usage:
 ------
-1 . **Delete nodes**
+**## 1 . Delete nodes**
 
 Run 'network_rewiring.py' and add the number of nodes you want to delete, for example:
 ```shell
@@ -15,7 +15,7 @@ $ python network_rewiring.py 0
 ```
 This step will create the folder and files needed in the next step.
   
-2 . **Calculate attractors**
+**2 . Calculate attractors**
 
 
 * **Without start input**
