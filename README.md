@@ -35,7 +35,10 @@ If you just want to calculate attractors, skip this step. This step will create 
   
 * With start input
   Make sure inputfile exist in your working directory.
-  Run script `attractors_without_nodes.py` and add the number of nodes you want to delete,the total number of network and the inputfilename, just like:`$ python attractors_without_nodes.py 1 42 Input_file.txt`
+  Run script `attractors_without_nodes.py` and add the number of nodes you want to delete,the total number of network and the inputfilename, just like:
+  ```shell
+  $ python attractors_without_nodes.py 1 42 Input_file.txt
+  ```
   '1' means you want to delete 1 node, '42' means the origion network contains 42 nodes, `Input_file.txt` is the name of your input.
   The inputfile should be like the following format:
   >
@@ -58,5 +61,5 @@ If you just want to calculate attractors, skip this step. This step will create 
         42	0.0
         
    left is the nodes number, it should start from 1;
-   right is its value and it should be float, using space to sepreate them.
-   Others are the same like 2.1.
+   right is its value which should be float, using space to sepreate them.
+   Others are the same as `Without start input`.
