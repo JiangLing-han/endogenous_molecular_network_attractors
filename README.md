@@ -14,7 +14,7 @@ Before compute attrators, please confirm requirments below:
   ```      
   `-net` indicate the path of network file, attracors will be saved in `./Attractors` by default.
   
-###  - **Without start input**
+###  - **With start input**
 
   ```shell
   $ python attractors.py -net ./network_origion.xlsx --start_list_path ./Input_file.txt
