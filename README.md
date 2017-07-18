@@ -1,50 +1,26 @@
 # endogenous_molecular_network_attractors
 Working scripts of [Chu, X.-Y.; Jiang, L.-H.; Zhou, X.-H.; Cui, Z.-J.; Zhang, H.-Y.	Evolutionary Origins of Cancer Driver Genes and Implications for Cancer Prognosis. ***Genes*** 2017, 8, 182.](http://www.mdpi.com/2073-4425/8/7/182), for calculating endogenous molecular network's attractors.
   
-Usage:
-------
-### **1 . Delete nodes**
+Basic Usage:
+---
+Before compute attrators, please confirm requirments below:
+- python2.7, other 2.x may also work, python3.x are not supported because `exec` changed in python3.x
+- scipy
 
-Run 'network_rewiring.py' and add the number of nodes you want to delete, for example:
-```shell
-$ python network_rewiring.py 1
-```
-If you just want to calculate attractors,
-```shell
-$ python network_rewiring.py 0
-```
-This step will create the folder and files needed in the next step.
-  
-### **2 . Calculate attractors**
+###  - **Without start input**
 
-
-* **Without start input**
-
-  Run script 'attractors_without_nodes.py' and add the number of nodes you want to delete,the total number of network 
-  for example:
   ```shell
-  $ python attractors_without_nodes.py 1 42
+  $ python attractors.py -net ./network_origion.xlsx
   ```      
-  `1` means you want to delete 1 node, `42` means the origion network contains 42 nodes.
-  This step will calculate the attractors and put them into the folder named as the number of nodes you input, just like:
-  ```shell
-  $ '/../network_without_nodes/2'
-  ```
-  The attractors are something like follows:
-  ```
-  691	['0.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.9543', '0.9306', '0.9306', '0.0000', '0.8402', '0.0000', '0.8259', '0.8184', '0.9170', '0.8694', '0.9405', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000']
-  128	['0.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.9543', '0.9306', '0.9306', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000']   
-  ```
-  first column is the size of attractor, second column is the attractor.
+  `-net` indicate the path of network file, attracors will be saved in `./Attractors` by default.
   
-* **With start input**
+###  - **Without start input**
 
-  Make sure input file exist in your working directory.
-  Run script `attractors_without_nodes.py` and add the number of nodes you want to delete,the total number of network and the inputfilename, just like:
   ```shell
-  $ python attractors_without_nodes.py 1 42 Input_file.txt
-  ```
-  '1' means you want to delete 1 node, '42' means the origion network contains 42 nodes, `Input_file.txt` is the name of your input.
+  $ python attractors.py -net ./network_origion.xlsx --start_list_path ./Input_file.txt
+  ```      
+  `--start_list_path` indicate the path of initial relative activities/concentrations for all the nodes in the network.
+  
   The inputfile should be like the following format:
   >
         1	0.0
@@ -66,5 +42,18 @@ This step will create the folder and files needed in the next step.
         42	0.0
         
    left is the nodes number, it should start from 1;
-   right is its value which should be float, using space to sepreate them.
+   right is its value which should be float, use `\t` to sepreate them.
    Others are the same as last section.
+   
+Results:
+---
+  The attractors are something like follows:
+  >
+
+  691	['0.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.9543', '0.9306', '0.9306', '0.0000', '0.8402', '0.0000', '0.8259', '0.8184', '0.9170', '0.8694', '0.9405', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000']
+  128	['0.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.9543', '0.9306', '0.9306', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1.0000', '0.0000', '1.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000']   
+
+  first column is the size of attractor, second column is the attractor.
+  
+
+
