@@ -1,5 +1,5 @@
 # endogenous_molecular_network_attractors
-Working scripts for calculating endogenous molecular network's attractors.
+Working scripts of [Chu X-Y, Jiang L-H, Zhou X-H, Cui Z-J, Zhang H-Y. Evolutionary Origins of Cancer Driver Genes and Implications for Cancer Prognosis. ***Genes***. 2017; 8(7):182.](http://www.mdpi.com/2073-4425/8/7/182), for calculating endogenous molecular network's attractors.
   
 Basic Usage:
 ---
